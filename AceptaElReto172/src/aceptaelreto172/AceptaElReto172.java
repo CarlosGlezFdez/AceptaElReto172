@@ -20,16 +20,16 @@ public class AceptaElReto172 {
         while (numsillas != 0) {
 
             String src = sc.nextLine();
-            boolean bool1 = true;
-            boolean bool2 = true;
-            for (int i = 0; i < numsillas; i++) {
-                if (src.charAt(i + 1) == 'I') {
-                    bool1 = false;
-                } else if (src.charAt(i) == 'D') {
-                    bool2 = false;
+            boolean bool1 = false;
+            boolean bool2 = false;
+            for (int i = 0; i < src.length(); i++) {
+                if (src.charAt(i) == 'I') {
+                    bool1 = true;
+                } if (src.charAt(i) == 'D') {
+                    bool2 = true;
                 }
             }
-            if (bool1 == false && bool2 == false) {
+            if (bool1 && bool2) {
                 System.out.println("ALGUNO NO COME");
             } else {
                 System.out.println("TODOS COMEN");
